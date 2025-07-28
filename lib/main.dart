@@ -6,6 +6,7 @@ import 'package:provider_demo/provider/slider_provider.dart';
 import 'package:provider_demo/provider/theme_provider.dart';
 import 'package:provider_demo/screens/counter_example.dart';
 import 'package:provider_demo/screens/favourite/favourite_screen.dart';
+import 'package:provider_demo/screens/notify_listner.dart';
 import 'package:provider_demo/screens/slider_screen.dart';
 import 'package:provider_demo/screens/theme_mode_screen.dart';
 
@@ -56,7 +57,7 @@ class MyApp extends StatelessWidget {
                 iconTheme: IconThemeData(color: Colors.white)),
             debugShowCheckedModeBanner: false,
             home:
-                const ThemeModeScreen(), //FavouriteScreen(), //const CounterExample(),
+                NotifyListner(), //const ThemeModeScreen(), //FavouriteScreen(), //const CounterExample(),
           );
         }));
   }
