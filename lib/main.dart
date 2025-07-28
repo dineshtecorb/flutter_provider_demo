@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_demo/provider/auth_provider.dart';
 import 'package:provider_demo/provider/count_provider.dart';
 import 'package:provider_demo/provider/favourite_provider.dart';
 import 'package:provider_demo/provider/slider_provider.dart';
 import 'package:provider_demo/provider/theme_provider.dart';
 import 'package:provider_demo/screens/counter_example.dart';
 import 'package:provider_demo/screens/favourite/favourite_screen.dart';
+import 'package:provider_demo/screens/login_screen.dart';
 import 'package:provider_demo/screens/notify_listner.dart';
 import 'package:provider_demo/screens/slider_screen.dart';
 import 'package:provider_demo/screens/theme_mode_screen.dart';
@@ -33,6 +35,9 @@ class MyApp extends StatelessWidget {
           ),
           ChangeNotifierProvider(
             create: (context) => ThemeProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => AuthProvider(),
           )
         ],
         child: Builder(builder: (context) {
@@ -57,7 +62,7 @@ class MyApp extends StatelessWidget {
                 iconTheme: IconThemeData(color: Colors.white)),
             debugShowCheckedModeBanner: false,
             home:
-                NotifyListner(), //const ThemeModeScreen(), //FavouriteScreen(), //const CounterExample(),
+                LoginScreen(), //NotifyListner(), //const ThemeModeScreen(), //FavouriteScreen(), //const CounterExample(),
           );
         }));
   }
